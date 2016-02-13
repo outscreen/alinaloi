@@ -19,5 +19,9 @@
     "inert": "^3.2.0",
     "lodash": "^4.0.1",
     "node-sass": "^3.4.2"
+  },
+  "scripts": {
+    "preinstall": "bower install",
+    "postinstall": "grunt"
   }
 }
