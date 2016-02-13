@@ -7,12 +7,21 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-bower-concat');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-bower-task');
 
     //track the time a task takes
     //require('time-grunt')(grunt);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+        bower: {
+            install: {
+                options: {
+                    copy: false
+                }
+            }
+        },
 
         bower_concat: {
             all: {
@@ -61,4 +70,5 @@ module.exports = function (grunt) {
             require('./view/libsass')(this.async());
         }
     );
+    grunt.registerTask('install', ['bower', 'default']);
 };
