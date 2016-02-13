@@ -1,0 +1,24 @@
+{
+  "name": "alina",
+  "version": "0.0.0",
+  "authors": [
+    "Alina Loi"
+  ],
+  "description": "Alina Loi personal page",
+  "main": "index.js",
+  "license": "MIT",
+  "homepage": "alinaloi.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.9",
+    "angular-material": "~1.0.3",
+    "angular-ui-router": "~0.2.17",
+    "lodash": "~4.1.0"
+  }
+}
