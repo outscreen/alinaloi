@@ -1,0 +1,24 @@
+{
+  "robot": {
+    "minDamage": 10,
+    "maxDamage": 100,
+    "minHp": 50,
+    "maxHp": 150,
+    "idLength": 10
+  },
+  "mongo": {
+    "uri": "mongodb://uttcvifeomspiap:gUyBLbw1rZiaHRVDjaU6@bstf7r0betva4zy-mongodb.services.clever-cloud.com:27017/bstf7r0betva4zy"
+  },
+  "session": {
+    "cookieName": "sessionKey",
+    "length": 10,
+    "lifeTime": 2
+  },
+  "battle": {
+    "minRobots": 2,
+    "maxRobots": 20,
+    "idLength": 5,
+    "maxRandomDamage": 25,
+    "randomDamageInterval": 5
+  }
+}

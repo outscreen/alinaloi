@@ -1,0 +1,20 @@
+<div class="content">
+    <nav class="nav-detailed">
+        <md-list>
+            <div ng-repeat="item in HomeCtrl.menuItems" ng-click="sdf">
+            <md-list-item class="md-3-line disable-md-clickable"
+                          ng-if="item.state !== HomeCtrl.state" >
+                <img ng-src="{{item.img}}" class="face" alt="{{item.title}}">
+
+                <div class="md-list-item-text">
+                    <h3 class="bright-color">{{item.title}}</h3>
+                    <p>{{item.description}}</p>
+                </div>
+                <md-button class="md-secondary md-raised home-menu-btn" ui-sref="{{item.state}}">View</md-button>
+                <md-divider ng-if="!$last"></md-divider>
+            </md-list-item>
+            </div>
+        </md-list>
+    </nav>
+</div>
+

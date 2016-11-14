@@ -1,0 +1,21 @@
+<div class="circle-menu circle-menu-container">
+    <div class="circle-menu-item circle-menu-center">
+        <div class="circle-menu-content">
+            <div>
+                {{CircleMenu.activeItem.description}}
+            </div>
+        </div>
+    </div>
+    <div ng-repeat="item in CircleMenu.items track by $index"
+         class="circle-menu-item"
+         ng-class="CircleMenu.isActive(item) && (CircleMenu.bgColors[item.colorId] + ' ' + CircleMenu.borderColors[item.colorId])"
+         ng-mouseover="CircleMenu.setActive(item)"
+         ng-mouseleave="CircleMenu.setActive(null)"
+         id="circle-menu-item{{$index}}">
+        <div class="circle-menu-content">
+            <div>
+                {{item.title}}
+            </div>
+        </div>
+    </div>
+</div>

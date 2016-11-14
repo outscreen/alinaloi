@@ -1,0 +1,10 @@
+<nav class="header-nav">
+    <ul>
+        <li ng-repeat="item in HorizontalMenu.menuItems">
+            <a href="#" ui-sref="{{item.state}}"
+               ng-class="{'active': HorizontalMenu.getState() === item.state}">
+                {{item.title}}
+            </a>
+        </li>
+    </ul>
+</nav>

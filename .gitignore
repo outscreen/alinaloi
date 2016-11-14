@@ -1,0 +1,6 @@
+bower_components
+node_modules
+public/css/*
+public/scripts/*
+Archive.zip
+npm-debug.log

@@ -1,0 +1,9 @@
+{
+    "joinBattle": {
+        "path": "/",
+        "isAbsolute": true,
+        "method": "GET",
+        "controller": "joinBattle",
+        "session": true
+    }
+}

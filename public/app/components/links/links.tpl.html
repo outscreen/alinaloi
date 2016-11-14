@@ -1,0 +1,13 @@
+<md-tabs md-dynamic-height md-border-bottom class="links">
+    <md-tab ng-repeat="(tag, tagName) in LinksCtrl.tags" label="{{tagName}}">
+            <md-list>
+                <md-list-item ng-repeat="link in LinksCtrl.links[tag]"
+                              ng-click="LinksCtrl.open(link.url, $event)">
+                    <img
+                         ng-src="{{ 'http://www.google.com/s2/favicons?domain=' + link.hostname }}"/>
+                    <p class="link-title">{{ link.title }}</p>
+                    <i class="material-icons">thumb_up</i>
+                </md-list-item>
+            </md-list>
+    </md-tab>
+</md-tabs>
