@@ -40,15 +40,9 @@ server.register(require('inert'), (err) => {
         }
     });
 
-    server.route({
-        method: 'OPTIONS',
-        path: '/files/{path*}',
-        handler: function (request, reply) {
-            return reply()
-                .header("Access-Control-Allow-Origin", "*")
-                .header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-        }
-    });
+    server.route({ method: 'GET', path: '/man',
+        handler: (request, reply) => reply.file('./public/man/index.html'), });
+
 
     server.route({
         method: 'GET',
@@ -58,6 +52,7 @@ server.register(require('inert'), (err) => {
             return reply.file('./public/asm/summary.txt').header("Content-Type", "text/plain; charset=windows-1251");
         }
     });
+
     server.route({
         method: 'GET',
         path: '/asm/{path*}',
